@@ -5,6 +5,7 @@ var express        = require('express');
 var app            = express();
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
+var mongoose = require('mongoose');
 
 // configuration ===========================================
     
@@ -16,7 +17,7 @@ var port = process.env.PORT || 8080;
 
 // connect to our mongoDB database 
 // (uncomment after you enter in your own credentials in config/db.js)
-//mongoose.connect(db.url); 
+mongoose.connect(db.url); 
 
 // get all data/stuff of the body (POST) parameters
 // parse application/json 
@@ -36,6 +37,21 @@ app.use(express.static(__dirname + '/public'));
 
 // routes ==================================================
 require('./app/routes')(app); // configure our routes
+
+// // ROUTES FOR OUR API
+// // =============================================================================
+// var router = express.Router();              // get an instance of the express Router
+
+// // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+// router.get('/', function(req, res) {
+//     res.json({ message: 'hooray! welcome to our api!' });   
+// });
+
+// // more routes for our API will happen here
+
+// // REGISTER OUR ROUTES -------------------------------
+// // all of our routes will be prefixed with /api
+// app.use('/api', router);
 
 // start app ===============================================
 // startup our app at http://localhost:8080
