@@ -1,5 +1,32 @@
 <div class="jumbotron text-center">
-    <h1>Nerds and Proud</h1>
+     <form name="userForm", ng-submit="userFormSubmit(user)">
+     	<input type="text", name="name", ng-model="user.name" placeholder="Enter name" />
+     	<input type="submit", value="submit" />
+     </form>
 
-    <p>{{ tagline }}</p>
+	<div class="panel panel-default">
+		<!-- Default panel contents -->
+		<div class="panel-heading">Users</div>
+		<div class="panel-body">
+		<!-- <p>Users</p> -->
+		</div>
+
+		<!-- Table -->
+		<table class="table" ng-repeat="user in users">
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Username</th>
+				<th>Actions</th>
+			</tr>
+
+			<tr>
+				<td>{{user.name}}</td>
+				<td>{{user.email}}</td>
+				<td>{{user.username}}</td>
+				<td><button type="button" ng-click="userUpdate(user, user._id)">Update</button><button type="button" ng-click="userDestroy(user._id)">Destroy</button></td>
+			</tr>
+		</table>
+	</div>
+
 </div>

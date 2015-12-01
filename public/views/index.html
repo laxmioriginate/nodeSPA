@@ -16,11 +16,12 @@
     <!-- // <script src="libs/angular-route/angular-route.min.js"></script> -->
 
     <!-- ANGULAR CUSTOM -->
+    <script src="js/app.js"></script>
     <script src="js/controllers/Main.js"></script>
     <script src="js/controllers/service.js"></script>
     <script src="js/services/serService.js"></script>
     <script src="js/appRoutes.js"></script>
-    <script src="js/app.js"></script>
+   
 </head>
 <body ng-app="sampleApp" ng-controller="ServiceController">
 <div class="container">
@@ -36,6 +37,19 @@
             <li><a ui-sref="home.service">Services</a></li>
         </ul>
     </nav>
+
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h1><span class="fa fa-lock"></span> Node Authentication</h1>
+
+            <p>Login or Register with:</p>
+
+            <a ui-sref="home.login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+            <a ui-sref="home.signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+        </div>
+
+    </div>
 
     <!-- ANGULAR DYNAMIC CONTENT -->
     <div class="app" id="app" ui-view></div>

@@ -3,7 +3,7 @@
   
 
   // public/js/app.js
-angular.module('sampleApp', ['ui.router', 'appRoutes', 'MainCtrl', 'ServiceCtrl', 'SerService']);
+var app = angular.module('sampleApp', ['ui.router', 'appRoutes']);
 
 
 

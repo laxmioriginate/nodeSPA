@@ -20,7 +20,7 @@ angular.module('appRoutes', []).config(['$stateProvider', '$urlRouterProvider', 
         abstract: true,
         url: '',
         template: '<div class="app" id="app" ui-view></div>',
-        controller: 'MainController'
+       // controller: 'MainController'
         // data: {
         //   roles: ['user', 'admin']
         // }
@@ -33,7 +33,17 @@ angular.module('appRoutes', []).config(['$stateProvider', '$urlRouterProvider', 
     .state('home.service', {
         url: '/sercives',
         templateUrl: 'views/service.html',
-        controller: 'ServiceController'
+        //controller: 'ServiceController'
+    })
+    .state('home.login', {
+        url: '/login',
+        templateUrl: 'views/login.html',
+        //controller: 'ServiceController'
+    })
+    .state('home.signup', {
+        url: '/login',
+        templateUrl: 'views/signup.html',
+        //controller: 'ServiceController'
     })
 
     // .state('home', {
