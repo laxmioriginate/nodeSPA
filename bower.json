@@ -1,11 +1,32 @@
 {
-    "name": "nodeSPA",
-    "version": "1.0.0",
-    "dependencies": {
-        "bootstrap": "latest",
-        "font-awesome": "latest",
-        "animate.css": "latest",
-        "angular": "latest",
-        "angular-route": "latest"   
-    }
+  "name": "nodeSPA",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "laxmioriginate <laxmioriginate@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/laxmioriginate/nodeSPA",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-messages": "~1.3.17",
+    "angular-file-upload": "1.1.5",
+    "angular-mocks": "~1.3",
+    "angular-resource": "~1.3",
+    "angular-ui-router": "~0.2",
+    "angular-animate": "~1.3",
+    "angular-bootstrap": "~0.13",
+    "jquery": ">= 1.9.1",
+    "owasp-password-strength-test": "~1.3.0",
+    "bootstrap": "~3",
+    "angular-ui-utils": "bower"
+  }
 }
